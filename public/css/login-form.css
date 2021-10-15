@@ -1,0 +1,32 @@
+.login-form {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login-form .flex {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  border-radius: 2rem;
+  background-color: #32657e;
+  color: white;
+  width: 300px;
+}
+.login-form .flex input {
+  margin-bottom: 20px;
+  margin-top: 5px;
+  outline: none;
+  border: none;
+  padding: 10px 8px;
+  border-radius: 4px;
+}
+.login-form .flex button {
+  outline: none;
+  border: none;
+  padding: 10px 8px;
+  background-color: #193f52;
+  color: white;
+  border-radius: 4px;
+}

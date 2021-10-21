@@ -35,7 +35,8 @@ class PostCrudController extends AbstractCrudController
             // DateTimeField::new('createdAt','Posted At'),
             TextareaField::new('imageFile')
             ->setFormType(VichImageType::class)
-            ->hideOnIndex(),
+            ->hideOnIndex()
+            ->setFormTypeOption('allow_delete',false)
         ];
     }
 }

@@ -51,6 +51,11 @@ class Post
     */
     private $category;
 
+    /**
+     * @ORM\Column(type="datetime_immutable", nullable=true)
+     */
+    private $updatedAt;
+
     // /**
     //  * @ORM\Column(type="timestamp",options={"default"="CURRENT_TIMESTAMP"})
     //  */
@@ -73,7 +78,7 @@ class Post
         // otherwise the event listeners won't be called and the file is lost
         if ($image) {
             // if 'updatedAt' is not defined in your entity, use another property
-            $this->updatedAt = new \DateTime('now');
+            $this->updatedAt = new \DateTimeImmutable('now');
         }
     }
     // /**
@@ -142,4 +147,16 @@ class Post
 
     //     return $this;
     // }
+
+    public function getUpdatedAt(): ?\DateTimeImmutable
+    {
+        return $this->updatedAt;
+    }
+
+    public function setUpdatedAt(?\DateTimeImmutable $updatedAt): self
+    {
+        $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
 }
